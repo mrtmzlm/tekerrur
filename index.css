@@ -1,37 +1,201 @@
 /* =========================================
-   SONUÇ KARTI VE QUIZ KUTUSU (DÜZELTİLDİ)
+   GENEL AYARLAR
    ========================================= */
-/* Ortak Özellikler */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png'), linear-gradient(to bottom, #1a0b0b, #2e1c11);
+    background-blend-mode: overlay;
+    background-size: auto, cover;
+    background-attachment: fixed;
+    color: #f4e4d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+/* =========================================
+   KAPSAYICILAR (MENÜ, OYUN, TEST)
+   ========================================= */
+#menu-screen, #game-screen, #islahat-submenu, #quiz-screen {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh; /* Tam ekranı kapla */
+    display: flex; /* Flexbox ile hizala */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Dikeyde ortala */
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Mobilde üstten başlasın, ortada sıkışmasın */
+@media (max-width: 500px) {
+    #menu-screen, #game-screen, #islahat-submenu, #quiz-screen {
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+}
+
+/* =========================================
+   METİN STİLLERİ
+   ========================================= */
+h1.main-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-family: 'Cinzel', serif;
+    color: #a07f52;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.topic-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* =========================================
+   BUTONLAR VE GRİDLER
+   ========================================= */
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Yan yana iki */
+    gap: 15px;
+    width: 100%;
+}
+
+.cat-btn {
+    background: linear-gradient(135deg, rgba(45, 27, 14, 0.9), rgba(60, 40, 25, 0.95));
+    border: 2px solid #a07f52;
+    border-radius: 12px;
+    padding: 20px;
+    color: #f4e4d0;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    min-height: 100px; /* Butonlar eşit boyda olsun */
+}
+
+.cat-btn:hover {
+    transform: translateY(-3px);
+    border-color: #d4af37;
+}
+
+.cat-btn span { font-size: 1.8em; }
+
+/* Alt Menüdeki "Tüm Islahatlar" Butonu - Altın Sarısı */
+.gold-btn {
+    background: linear-gradient(135deg, #b8860b, #d4af37) !important;
+    color: #2e1c11 !important;
+    border-color: #fff !important;
+    font-weight: bold;
+}
+
+/* Alt Menüdeki "Quiz" Butonu - Kırmızı */
+.quiz-mode-btn {
+    background: linear-gradient(135deg, #7c0a02, #9e1b1b) !important;
+    border-color: #ff6b6b !important;
+}
+
+.back-btn {
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #a07f52;
+    color: #a07f52;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   OYUN MODU (KAVANOZ)
+   ========================================= */
+.jar {
+    width: 200px;
+    height: 240px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(212, 175, 55, 0.15));
+    border: 5px solid #806341;
+    border-top: none;
+    border-radius: 15px 15px 60px 60px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    margin: 0 auto 30px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jar::before {
+    content: ''; position: absolute; top: -25px; left: 50%; transform: translateX(-50%);
+    width: 220px; height: 25px;
+    background: #a07f52; border-radius: 5px; border-bottom: 3px solid #5a3e26;
+}
+
+.paper-scrap {
+    width: 50px; height: 50px; 
+    background-color: #f4e4d0;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    position: absolute; opacity: 0.9; border-radius: 3px;
+    border: 1px solid #d4af37; display: flex; align-items: center; justify-content: center;
+    color: #7c0a02; font-family: 'Cinzel', serif; font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); font-size: 1.2em;
+}
+
+/* =========================================
+   SONUÇ KARTI & QUIZ KUTUSU (ORTAK)
+   ========================================= */
 #result-card, .question-container {
     position: relative;
     width: 95%;
     max-width: 500px;
     margin: 0 auto 20px auto;
-
-    background-color: #f0ead6; /* Krem Rengi */
+    background-color: #f0ead6;
     background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-    
-    border: 2px solid #cbbfa3;
+    border: 3px double #5d4037;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     padding: 25px 20px;
     text-align: center;
-    animation: slideDown 0.3s ease-out;
 }
 
-/* KAVANOZ KARTI: Başlangıçta GİZLİ olmalı (Soru çekince açılacak) */
-#result-card {
-    display: none; 
-}
+/* Oyun modunda kart gizli başlar */
+#result-card { display: none; animation: slideDown 0.3s ease-out; }
 
-/* QUIZ KUTUSU: Başlangıçta GÖRÜNÜR olmalı */
-.question-container {
-    display: block; 
-    margin-top: 20px; /* Üstten biraz boşluk bırakalım */
-}
+/* Quiz modunda soru kutusu hep görünür */
+.question-container { display: block; }
 
-/* İçindeki yazılar */
 .label {
     font-family: 'Cinzel', serif; font-size: 0.8em; color: #8c7b70;
     text-transform: uppercase; letter-spacing: 1px; font-weight: bold;
@@ -40,10 +204,94 @@
 
 #word-text, #quiz-question {
     font-family: 'Merriweather', serif; 
-    font-size: 1.3em; 
-    font-weight: bold;
-    color: #33221a; /* Koyu kahve yazı (Görünür olması için) */
-    line-height: 1.4; 
-    margin-bottom: 25px; 
-    display: block;
+    font-size: 1.3em; font-weight: bold; color: #33221a; 
+    line-height: 1.4; margin-bottom: 20px; display: block;
 }
+
+.reveal-btn {
+    display: block; width: fit-content; margin: 0 auto;
+    font-family: 'Cinzel', serif; font-size: 0.9em; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: #5d4037; background: transparent;
+    border: 2px solid #8d6e63; padding: 10px 30px; border-radius: 50px;
+    cursor: pointer;
+}
+
+.meaning {
+    display: none; font-family: 'Cinzel', serif; font-size: 1.5em;
+    font-weight: 700; color: #800000; margin-top: 20px; padding-top: 15px;
+    border-top: 1px dashed #cbbfa3; animation: fadeIn 0.4s;
+}
+
+/* =========================================
+   QUIZ MODU ÖZEL
+   ========================================= */
+.quiz-header {
+    width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;
+}
+.score-board { color: #ffd700; font-family: 'Cinzel', serif; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 10px; }
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mobilde alt alta olması için medya sorgusuna bak */
+    gap: 15px;
+    width: 100%;
+}
+
+.quiz-opt-btn {
+    background: linear-gradient(to bottom, #3e2723, #281a16);
+    color: #f4e4d0;
+    border: 1px solid #8d6e63;
+    padding: 20px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 80px; /* Buton yüksekliği */
+}
+
+.quiz-opt-btn:hover { background: #5d4037; transform: translateY(-2px); border-color: #d4af37; }
+.quiz-opt-btn.correct { background: #27ae60 !important; border-color: #2ecc71 !important; color: white; }
+.quiz-opt-btn.wrong { background: #c0392b !important; border-color: #e74c3c !important; opacity: 0.6; }
+
+#quiz-feedback { margin-top: 20px; font-size: 1.5em; font-weight: bold; font-family: 'Cinzel', serif; height: 30px; }
+
+/* =========================================
+   OYUN BUTONU
+   ========================================= */
+button.draw-btn {
+    display: block; margin: 0 auto;
+    font-family: 'Cinzel', serif; padding: 15px 40px; 
+    font-size: 1.3em; font-weight: bold;
+    background: linear-gradient(to bottom, #1e3c00, #2e5700); 
+    color: #f4e4d0;
+    border: 2px solid #d4af37; border-radius: 50px; 
+    cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.6); 
+    width: 90%; max-width: 300px;
+}
+button.draw-btn:active { transform: scale(0.95); }
+
+.counter { margin-top: 20px; color: #d4af37; font-family: 'Cinzel', serif; font-size: 1em; }
+
+/* =========================================
+   MOBİL İÇİN DÜZENLEMELER
+   ========================================= */
+@media (max-width: 500px) {
+    /* Menü butonlarını tek sıraya düşür */
+    .category-grid, .options-grid { grid-template-columns: 1fr; }
+    
+    .jar { width: 150px; height: 190px; }
+    .jar::before { width: 170px; }
+    
+    h1.main-title { font-size: 1.5rem; }
+    
+    .question-container, #result-card { padding: 15px; }
+    #word-text, #quiz-question { font-size: 1.1em; }
+    .quiz-opt-btn { min-height: 60px; font-size: 0.9em; }
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
