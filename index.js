@@ -507,4 +507,3 @@ function showMeaning() {
     }, 3000); // 3000 milisaniye = 3 saniye
 }
 
-// ... (Test Modu fonksiyonları aşağıda aynı kalabilir) ...
