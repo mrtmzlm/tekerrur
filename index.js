@@ -36,7 +36,14 @@ const database = {
         { word: "Museviliği kabul eden ilk ve tek Türk devleti?", meaning: "Hazarlar" },
         { word: "İslamiyet'i kabul eden ilk Türk boyu?", meaning: "Karluklar" },
         { word: "Yerleşik hayata geçen ilk Türk devleti?", meaning: "Uygurlar" },
-        { word: "Türk tarihinde din değiştiren (Maniheizm ve Budizm gibi) ilk Türk devleti?", meaning: "Uygurlar" }
+        { word: "Türk tarihinde din değiştiren (Maniheizm ve Budizm gibi) ilk Türk devleti?", meaning: "Uygurlar" },
+
+        // EK KARTLAR
+        { word: "Tarih sahnesine çıkan ilk Türk devleti?", meaning: "Asya (Büyük) Hun Devleti" },
+        { word: "Asya Hun Devleti'nin kurucusu?", meaning: "Teoman" },
+        { word: "Asya Hun Devleti'ni en güçlü dönemine ulaştıran hükümdar?", meaning: "Mete Han" },
+        { word: "Kavimler Göçü'ne sebep olan Türk topluluğu?", meaning: "Hunlar (Batı Hunları)" },
+        { word: "Türk adını 'devlet adı' olarak ilk kullanan devlet?", meaning: "Göktürkler" }
     ],
     "turk_islam": [
         { word: "Orta Asya'da kurulan ilk Müslüman Türk devleti?", meaning: "Karahanlılar" },
@@ -66,14 +73,21 @@ const database = {
         { word: "İslami dönem Türk edebiyatının İLK eseri?", meaning: "Kutadgu Bilig (Yusuf Has Hacip)" },
         { word: "İlk Türk-İslam dünya haritasını çizen bilgin?", meaning: "Kaşgarlı Mahmut" },
         { word: "Türkçenin Arapçadan zengin olduğunu göstermek için yazılan sözlük?", meaning: "Divan-ı Lügati't Türk (Kaşgarlı Mahmut)" },
-        { word: "Nizamiye Medreselerini kuran devlet yöneticisi?", meaning: "Tuğrul – Alp Arslan – Melikşah dönemleri (Büyük Selçuklu)" },
+        { word: "Nizamiye Medreselerini kuran devlet adamı?", meaning: "Nizamülmülk (Büyük Selçuklu Veziri)" },
         { word: "Nizamiye medreselerinin kuruluş amacı?", meaning: "Devlet adamı ve alim yetiştirmek, Şii propagandasını engellemek" },
         { word: "Muallim-i Sani (İkinci Öğretmen) olarak bilinen bilgin?", meaning: "Farabi" },
         { word: "Avrupalıların 'Avicenna' dediği, Tıbbın Hükümdarı?", meaning: "İbn-i Sina" },
         { word: "Cebir ilminin kurucusu ve '0' rakamını kullanan bilgin?", meaning: "Harezmi" },
         { word: "Sosyoloji ve tarih felsefesinin kurucusu kabul edilen bilgin?", meaning: "İbn-i Haldun" },
         { word: "“Medinetü’l Fazıla” (Erdemliler Şehri) adlı eserin yazarı?", meaning: "Farabi" },
-        { word: "Optik biliminin öncüsü, 'Kitab-ül Menazır'ı yazan bilgin?", meaning: "İbn-i Heysem" }
+        { word: "Optik biliminin öncüsü, 'Kitab-ül Menazır'ı yazan bilgin?", meaning: "İbn-i Heysem" },
+
+        // EK KARTLAR
+        { word: "Karahanlı Devleti'nin kurucusu?", meaning: "Bilge Kül Kadir Han" },
+        { word: "Karahanlılarda İslamiyet'i resmen kabul eden hükümdar?", meaning: "Satuk Buğra Han" },
+        { word: "Gazneliler Devleti'nin kurucusu?", meaning: "Alptegin" },
+        { word: "Büyük Selçuklu Devleti'nin kurucusu?", meaning: "Tuğrul Bey" },
+        { word: "İlk Türk-İslam medreselerinin görüldüğü şehirlerden biri?", meaning: "Semerkant (Karahanlılar dönemi)" }
     ],
     "osmanli_kultur": [
         { word: "Osmanlı'da devlet işlerinin görüşüldüğü en yüksek kurul?", meaning: "Divan-ı Hümayun" },
@@ -130,7 +144,11 @@ const database = {
         { word: "Timur ile Yıldırım Bayezid arasında yapılan ve Fetret Devri'ni başlatan savaş?", meaning: "Ankara Savaşı (1402) (KURULUŞ)" },
         { word: "Osmanlı'nın ikinci kurucusu sayılan padişah?", meaning: "I. Mehmet (Çelebi) (KURULUŞ)" },
         { word: "II. Murat'ın Haçlılara karşı kesin zafer kazandığı savaş?", meaning: "Varna Savaşı (1444) (KURULUŞ)" },
-        { word: "Osmanlı'nın Balkanlardaki hakimiyetini kesinleştiren savaş?", meaning: "II. Kosova Savaşı (KURULUŞ)" }
+        { word: "Osmanlı'nın Balkanlardaki hakimiyetini kesinleştiren savaş?", meaning: "II. Kosova Savaşı (KURULUŞ)" },
+
+        // EK KARTLAR
+        { word: "Osmanlı Devleti'nin ilk başkenti?", meaning: "Söğüt (daha sonra Bilecik–Bursa)" },
+        { word: "Osmanlı'da ilk düzenli ordu (Yaya ve Müsellem) hangi dönemde kuruldu?", meaning: "Orhan Bey Dönemi" }
     ],
     "osmanli_yukselis": [
         { word: "İstanbul'un Fethi ile sona eren çağ?", meaning: "Orta Çağ (YÜKSELİŞ)" },
@@ -143,7 +161,13 @@ const database = {
         { word: "Akdeniz'in Türk gölü haline gelmesini sağlayan zafer?", meaning: "Preveze Deniz Zaferi (YÜKSELİŞ)" },
         { word: "İlk Osmanlı-İran resmi antlaşması?", meaning: "Amasya Antlaşması (Kanuni) (YÜKSELİŞ)" },
         { word: "Haçlıların Osmanlı donanmasını ilk kez yaktığı olay (Kıbrıs'ın fethinden sonra)?", meaning: "İnebahtı Deniz Bozgunu (YÜKSELİŞ)" },
-        { word: "Sadrazam Sokullu Mehmet Paşa'nın ölümüyle sona eren dönem?", meaning: "Yükselme Dönemi (YÜKSELİŞ)" }
+        { word: "Sadrazam Sokullu Mehmet Paşa'nın ölümüyle sona eren dönem?", meaning: "Yükselme Dönemi (YÜKSELİŞ)" },
+
+        // EK KARTLAR
+        { word: "İstanbul'u fetheden padişah kimdir?", meaning: "Fatih Sultan Mehmet (II. Mehmet)" },
+        { word: "İstanbul'un fethinin Osmanlı tarihi açısından en önemli sonucu?", meaning: "Osmanlı'nın imparatorluk haline gelmesi ve Yükselme Dönemi'nin başlaması" },
+        { word: "İstanbul'un fethiyle sona eren imparatorluk?", meaning: "Doğu Roma (Bizans) İmparatorluğu" },
+        { word: "Osmanlı Devleti'nde klasik dönemde 'Kanunname-i Ali Osman'ı hazırlatan padişah?", meaning: "Fatih Sultan Mehmet" }
     ],
     "osmanli_duraklama": [
         { word: "Osmanlı'nın doğuda en geniş sınırlara ulaştığı antlaşma?", meaning: "Ferhat Paşa Antlaşması (DURAKLAMA)" },
@@ -166,8 +190,8 @@ const database = {
     "osmanli_dagilma": [
         { word: "1798'de Napolyon'un işgal ettiği Osmanlı toprağı?", meaning: "Mısır" },
         { word: "1798'de Akka'da Napolyon'u mağlup eden Osmanlı komutanı?", meaning: "Cezzar Ahmet Paşa" },
-        { word: "1801'de Fransa'nın Mısır'dan çekilmesini sağlayan antlaşma?", meaning: "El Arış Antlaşması" },
-        { word: "1802'de Mısır'ın Osmanlı Devleti'ne ait olduğunun kabul edildiği antlaşma?", meaning: "Paris Paktı" },
+        { word: "1801'de Fransa'nın Mısır'ı boşaltmayı ve Mısır'ın Osmanlı'ya ait olduğunu kabul ettiği antlaşma?", meaning: "El Ariş Antlaşması (1800–1801)" },
+        { word: "Fransa ile Mısır meselesi sonrası kesin barışın sağlandığı antlaşma?", meaning: "Paris Antlaşması (1802)" },
         { word: "1804'te Sırp isyanını başlatan lider?", meaning: "Kara Yorgi" },
         { word: "1806'da başlayan savaş?", meaning: "Osmanlı - Rus Savaşı" },
         { word: "1807'de Fransa ile Rusya'nın Osmanlı topraklarını paylaştığı antlaşma?", meaning: "Tilsit Antlaşması" },
@@ -181,7 +205,6 @@ const database = {
         { word: "Yunan isyanını hazırlayan Bizans'ı diriltme ülküsü?", meaning: "Megali Idea" },
         { word: "II. Mahmut'un Yunan isyanıyla ilgilenememesinin temel nedeni?", meaning: "Tepedelenli Ali Paşa İsyanı" },
         { word: "1827’de İngiltere, Fransa ve Rusya'nın Osmanlı donanmasını yaktığı olay?", meaning: "Navarin Olayı" },
-        { word: "Navarin Olayı ile sona eren dönem?", meaning: "Restorasyon Dönemi" },
         { word: "1827-1828 arasında Osmanlı ile yapılan ve Rusya'nın kazandığı savaş?", meaning: "Osmanlı - Rus Savaşı" },
         { word: "1829'da Osmanlı ile Rusya arasında imzalanıp Yunanistan'a bağımsızlık veren antlaşma?", meaning: "Edirne Antlaşması" },
         { word: "Edirne Antlaşması ile özerklik kazanan millet?", meaning: "Sırplar" },
@@ -190,7 +213,12 @@ const database = {
         { word: "Mehmet Ali Paşa'nın Mora yerine istediği valilikler?", meaning: "Girit ve Suriye" },
         { word: "Mehmet Ali Paşa İsyanı’nı sona erdiren antlaşma?", meaning: "Kütahya Antlaşması (1833)" },
         { word: "Kütahya Antlaşması ile Mehmet Ali Paşa’ya verilen valilik?", meaning: "Mısır Valiliği" },
-        { word: "Kütahya Antlaşması ile İbrahim Paşa’ya verilen valilikler?", meaning: "Cidde ve Adana" }
+        { word: "Kütahya Antlaşması ile İbrahim Paşa’ya verilen valilikler?", meaning: "Cidde ve Adana" },
+
+        // EK KARTLAR
+        { word: "1877–1878 Osmanlı–Rus Savaşı'na verilen ad?", meaning: "93 Harbi" },
+        { word: "93 Harbi'ni sona erdiren ve Osmanlı'nın büyük toprak kaybına uğradığı antlaşma?", meaning: "Berlin Antlaşması (1878)" },
+        { word: "Berlin Antlaşması ile bağımsızlığını kazanan Balkan devletlerinden bazıları?", meaning: "Sırbistan, Karadağ, Romanya (bağımsız), Bulgaristan (özerk prenslik)" }
     ],
     "osmanli_20yy": [
         { word: "Osmanlı Devleti'nde meclisin yeniden açılmasıyla başlayan dönem?", meaning: "II. Meşrutiyet (1908) (XX. YY)" },
@@ -255,7 +283,7 @@ const database = {
         { word: "İlk kağıt para (Kaime) kimin döneminde basıldı?", meaning: "Sultan Abdülmecid (19. YY)" },
         { word: "İlk dış borç (Kırım Savaşı - İngiltere) kimin döneminde alındı?", meaning: "Sultan Abdülmecid (19. YY)" },
         { word: "İlk Osmanlı bankası (Bank-ı Dersaadet) kimin döneminde kuruldu?", meaning: "Sultan Abdülmecid (19. YY)" },
-        { word: "İngiliz sermayeli Bank-ı Osmani (Para basma yetkisi olan) ne zaman kuruldu?", meaning: "Sultan Abdülmecid (19. YY)" },
+        { word: "İngiliz sermayeli Bank-ı Osmani (para basma yetkili) hangi padişah döneminde kuruldu?", meaning: "Sultan Abdülmecid (1856)" },
         { word: "Jandarma ve Polis teşkilatının temelleri kimin döneminde atıldı?", meaning: "Sultan Abdülmecid (19. YY)" },
         { word: "İlk telgraf hattı (İstanbul-Edirne-Kırım) kimin döneminde çekildi?", meaning: "Sultan Abdülmecid (19. YY)" },
         { word: "İlk demiryolu hattı (İzmir-Aydın) kimin döneminde yapıldı?", meaning: "Sultan Abdülmecid (19. YY)" },
@@ -332,11 +360,18 @@ const database = {
         { word: "'Yenilik, değişim, modernleşme' hangi ilke?", meaning: "İnkılapçılık" },
         { word: "'Devletin ekonomik alanda düzenleyici, yatırımcı olması' hangi ilke?", meaning: "Devletçilik" },
         { word: "Türkiye'nin Milletler Cemiyeti'ne kabul edildiği yıl?", meaning: "1932" },
-        { word: "Türkiye ile Yunanistan arasındaki nüfus değişimi hangi antlaşmayla çözüldü?", meaning: "1930 Ahali (Mübadele) Antlaşması" },
+        { word: "Türkiye ile Yunanistan arasındaki zorunlu nüfus mübadelesi hangi sözleşmeyle kararlaştırıldı?", meaning: "1923 Türk–Yunan Nüfus Mübadelesi Sözleşmesi (Lozan eki)" },
+        { word: "Türk–Yunan nüfus mübadelesinden doğan sorunları büyük ölçüde çözen antlaşma?", meaning: "1930 Ankara (Ahali) Antlaşması" },
         { word: "Boğazlarda tam egemenliğin kazanıldığı sözleşme?", meaning: "Montrö Boğazlar Sözleşmesi (1936)" },
         { word: "Türkiye–İran–Irak–Afganistan arasında kurulan pakt?", meaning: "Sadabat Paktı (1937)" },
         { word: "Türkiye–Yunanistan–Yugoslavya–Romanya arasında kurulan pakt?", meaning: "Balkan Antantı (1934)" },
-        { word: "Atatürk'ün 'şahsi meselem' dediği ve Türkiye’ye katılan yer?", meaning: "Hatay (1939)" }
+        { word: "Atatürk'ün 'şahsi meselem' dediği ve Türkiye’ye katılan yer?", meaning: "Hatay (1939)" },
+
+        // EK KARTLAR
+        { word: "I. TBMM'nin temel yönetim sistemi nedir?", meaning: "Güçler birliği ve Meclis Hükümeti sistemi" },
+        { word: "Saltanatın kaldırılmasının temel gerekçesi hangi ilke ile açıklanır?", meaning: "Egemenlik kayıtsız şartsız milletindir (Cumhuriyetçilik)" },
+        { word: "Cumhuriyetin ilanıyla birlikte ilk Cumhurbaşkanı kim seçildi?", meaning: "Mustafa Kemal Atatürk" },
+        { word: "Atatürk döneminde çok partili hayata geçiş denemelerinde kurulan muhalefet partileri hangileridir?", meaning: "Terakkiperver Cumhuriyet Fırkası ve Serbest Cumhuriyet Fırkası" }
     ],
     "cagdas_turk": [
         { word: "SSCB'nin Türkistan'ı işgaline karşı başlatılan direniş hareketi?", meaning: "Basmacı Hareketi" },
@@ -399,6 +434,7 @@ const database = {
         { word: "Arap Baharı'nın başladığı ilk ülke?", meaning: "Tunus (Yasemin Devrimi)" }
     ]
 };
+
 
 // =================================================================
 // OYUN MANTIĞI VE KONTROLLER
